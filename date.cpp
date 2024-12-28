@@ -39,13 +39,19 @@ Date::Date (int day, int month, int year) {
         _day = day;
         _month = month;
         _year = year;
-        std::cout << "Votre date a ete cree avec succes" << std::endl ;
+        _check = true;
     }
-    else { std::cout << "votre date n'est pas correcte" << std::endl; }
+    else { 
+        std::cout << "votre date n'est pas correcte" << std::endl; 
+        _check = false;
+    }
 }
 
 std::string Date::display_date() const {
-    return std::to_string(_day) + "/" + std::to_string(_month) + "/" + std::to_string(_year) ;
+    if (_check) {
+        return std::to_string(_day) + "/" + std::to_string(_month) + "/" + std::to_string(_year);
+    }
+    else return "Date non fournie";
 }
 
 std::string Date::edit_date(int day, int month, int year) {
