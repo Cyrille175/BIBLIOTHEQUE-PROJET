@@ -6,10 +6,7 @@ private:
     int _day;
     int _month;
     int _year;
-<<<<<<< HEAD
-=======
     bool _check; //cette variable sera vraie quand la date sera correcte et fausse quand la date sera incorrecte 
->>>>>>> test
 
 public:
 
