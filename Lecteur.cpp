@@ -18,9 +18,14 @@ void Lecteur::display_birthday() const {
 }
 
 void Lecteur::display_ISBN_list() const {
-	std::cout << "Les ISBN des livres empruntés par cet utilisateur sont: " << std::endl;
-	for (size_t i = 0; i < _ISBNs.size(); i++) {
-		std::cout << _ISBNs[i] << std::endl;
+	if (_ISBNs.size() == 0) {
+		std::cout << "Il n'y a pas de livres empruntes par ce lecteur" << std::endl;
+	}
+	else {
+		std::cout << "Les ISBN des livres empruntes par cet utilisateur sont: " << std::endl;
+		for (size_t i = 0; i < _ISBNs.size(); i++) {
+			std::cout << _ISBNs[i] << std::endl;
+		}
 	}
 }
 
@@ -30,8 +35,8 @@ void Lecteur::add_ISBN(int ISBN) {
 
 int main() {
 	Lecteur anda(12, "cyrille", "anda", 31, 03, 2006);
-	std::cout << anda.get_first_name();
-	std::cout << anda.get_last_name();
+	std::cout << anda.get_first_name() << std::endl ;
+	std::cout << anda.get_last_name() << std::endl;
 	anda.display_birthday();
 	anda.display_ISBN_list();
 	anda.add_ISBN(23);
