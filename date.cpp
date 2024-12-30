@@ -54,7 +54,6 @@ Date::Date(int day, int month, int year) {
         _check = true;
     }
     else {
-        std::cout << "votre date n'est pas correcte" << std::endl;
         _check = false;
     }
 }
@@ -72,11 +71,6 @@ void Date::edit_date(int day, int month, int year) {
         _month = month;
         _day = day;
         _year = year;
-        std::cout << "Votre date a bien ete modifiee" << std::endl;
-    }
-
-    else {
-        std::cout << "Votre date n'est pas conforme a une date valide" << std::endl;
     }
 }
 

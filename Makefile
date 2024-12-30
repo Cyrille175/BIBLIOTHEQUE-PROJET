@@ -8,7 +8,7 @@ CXX = g++
 CXXFLAGS = -Wall -Wextra -g
 
 # Fichiers sources
-SRC = main.cpp Bibliotheque.cpp date.cpp Emprunt.cpp Lecteur.cpp Livre.cpp 
+SRC = main.cpp Library.cpp date.cpp Emprunt.cpp Lecteur.cpp Livre.cpp author.cpp
 
 # Fichiers objets générés
 OBJ = $(SRC:.cpp=.o)
