@@ -1,3 +1,6 @@
+#ifndef AUTHOR_H
+#define AUTHOR_H
+
 #include <string>
 #include <iostream>
 #include "date.h"
@@ -15,3 +18,5 @@ public:
     int get_author_id() const;
     void display_info_author() const;
 };
+
+#endif

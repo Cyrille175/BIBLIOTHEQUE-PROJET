@@ -13,6 +13,14 @@ std::string Lecteur::get_last_name() const {
 	return _last_name;
 }
 
+int Lecteur::get_unique_id() const {
+	return _unique_id;
+}
+
+Date Lecteur::get_birthday() const {
+	return _birthday;
+}
+
 void Lecteur::display_birthday() const {
 	_birthday.display_date();
 }
@@ -33,16 +41,18 @@ void Lecteur::add_ISBN(int ISBN) {
 	_ISBNs.push_back(ISBN);
 }
 
-int main() {
-	Lecteur anda(12, "cyrille", "anda", 31, 03, 2006);
-	std::cout << anda.get_first_name() << std::endl ;
-	std::cout << anda.get_last_name() << std::endl;
-	anda.display_birthday();
-	anda.display_ISBN_list();
-	anda.add_ISBN(23);
-	anda.add_ISBN(24);
-	anda.add_ISBN(25);
-	anda.add_ISBN(26);
-	anda.display_ISBN_list();
-	return 0;
+void Lecteur::set_first_name(std::string fn) {
+	_first_name = fn;
+}
+
+void Lecteur::set_last_name(std::string ln) {
+	_last_name = ln;
+}
+
+void Lecteur::set_id(int id) {
+	_unique_id = id;
+}
+
+void Lecteur::set_birthday(int day, int month, int year) {
+	_birthday.edit_date(day, month, year);
 }
