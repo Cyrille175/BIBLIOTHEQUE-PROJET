@@ -1,6 +1,6 @@
-# BIBLIOTHEQUE-PROJET
+# library-management-system-cpp
 
-BIBLIOTHEQUE-PROJET is a console-based C++ application that simulates a small library management system.
+Library-management-system-cpp is a console-based C++ application that simulates a small library management system.
 
 The project is designed around object-oriented programming and models the main entities of a library: books, members and loans. In addition to standard borrowing and returning operations, it also includes reservation queues, late-return fines, event logging and simple book recommendations based on user borrowing history.
 
